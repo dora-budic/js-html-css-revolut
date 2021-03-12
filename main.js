@@ -11,7 +11,7 @@ function dropdownMenu() {
     var linkPos = links.index(this);
 
     // Prendo i dropdown menus
-    var menus = $('.header-right .dropdown-menus div');
+    var menus = $('.header-right .dropdown-menus > div');
 
     // Prendo il menu con la stessa posizione di this e gli do la classe active
     menus.eq(linkPos).addClass('active');
@@ -22,7 +22,7 @@ function dropdownMenu() {
     var linkPos = links.index(this);
 
     // Prendo i dropdown menus
-    var menus = $('.header-right .dropdown-menus div');
+    var menus = $('.header-right .dropdown-menus > div');
 
     // Prendo il menu con la stessa posizione di this e gli tolgo la classe active
     menus.eq(linkPos).removeClass('active');
