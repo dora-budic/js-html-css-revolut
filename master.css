@@ -33,7 +33,6 @@ header {
   box-shadow: 0px 8px 16px rgba(25, 28, 31, 0.04);
   display: flex;
   justify-content: space-between;
-  position: relative;
 }
 
 .header-left, .header-right {
@@ -72,6 +71,10 @@ header ul > li > a {
   color: #191c1f;
 }
 
+.header-right {
+  position: relative;
+}
+
 .header-right .buttons {
   margin-left: 40px;
 }
@@ -84,21 +87,23 @@ header ul > li > a {
   background-color: rgba(25, 28, 31, 0.84);
 }
 
+header .dropdown-menus {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 header .features-menu, header .plans-menu, header .about-menu, header .help-menu {
   background-color: #fff;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04) , 0px 8px 16px 0px rgba(0, 0, 0, 0.08) ;
-}
-
-.menu > li:first-child {
-  position: relative;
 }
 
 header .features-menu {
   width: 800px;
   height: 300px;
   position: absolute;
-  right: 60px;
-  top: 70px;
+  left: -215px;
+  top: 50px;
   display: none;
 }
 
@@ -106,8 +111,8 @@ header .plans-menu {
   width: 160px;
   height: 240px;
   position: absolute;
-  right: 400px;
-  top: 70px;
+  left: 80px;
+  top: 50px;
   display: none;
 }
 
@@ -115,8 +120,8 @@ header .about-menu {
   width: 180px;
   height: 480px;
   position: absolute;
-  right: 310px;
-  top: 70px;
+  left: 145px;
+  top: 50px;
   display: none;
 }
 
@@ -124,11 +129,11 @@ header .help-menu {
   width: 160px;
   height: 240px;
   position: absolute;
-  right: 245px;
-  top: 70px;
+  left: 235px;
+  top: 50px;
   display: none;
 }
 
-.active {
+header div.active {
   display: block;
 }
