@@ -39,7 +39,7 @@ header {
   justify-content: space-between;
 }
 
-.header-left, .header-right {
+.header-left, .header-center, .header-right {
   display: flex;
   align-items: center;
 }
@@ -53,7 +53,7 @@ header ul {
   list-style: none;
 }
 
-header .header-left ul > li, .header-right .menu > li, .header-right .buttons > li {
+header .header-left ul > li, .header-center .menu > li, .header-right .buttons > li {
   display:inline-block;
   padding: 0 10px;
 }
@@ -62,7 +62,7 @@ header ul > li > a {
   text-decoration: none;
 }
 
-.header-left ul > li > a, .header-right ul.menu > li > a {
+.header-left ul > li > a, .header-center ul > li > a {
   color: #8b959e;
 }
 
@@ -71,38 +71,27 @@ header ul > li > a {
   color: #191c1f;
 }
 
-.header-left ul > li > a:hover, .header-right ul.menu > li > a:hover {
+.header-left ul > li > a:hover, .header-center ul > li > a:hover {
   color: #191c1f;
 }
 
-.header-right {
+.header-center {
   position: relative;
 }
 
-.header-right .buttons {
-  margin-left: 40px;
-}
-
-.header-right .buttons > li > a.btn-grey:hover {
-  background-color: rgba(230, 230, 230, 0.8);
-}
-
-.header-right .buttons > li > a.btn-black:hover {
-  background-color: rgba(25, 28, 31, 0.84);
-}
-
-header .dropdown-menus {
+header .header-center .dropdown-menus {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.header-right .features-menu, .header-right .plans-menu, .header-right .about-menu, .header-right .help-menu {
+.header-center .dropdown-menus > div {
   background-color: #fff;
+  border-radius: 10px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04) , 0px 8px 16px 0px rgba(0, 0, 0, 0.08) ;
 }
 
-.header-right .features-menu {
+.header-center .features-menu {
   width: 800px;
   position: absolute;
   left: -215px;
@@ -110,64 +99,52 @@ header .dropdown-menus {
   display: none;
 }
 
-.header-right .plans-menu {
+.header-center .plans-menu {
   width: 160px;
-  height: 240px;
   position: absolute;
   left: 80px;
   top: 50px;
   display: none;
 }
 
-.header-right .about-menu {
+.header-center .about-menu {
   width: 180px;
-  height: 480px;
   position: absolute;
   left: 145px;
   top: 50px;
   display: none;
 }
 
-.header-right .help-menu {
+.header-center .help-menu {
   width: 160px;
-  height: 240px;
   position: absolute;
   left: 235px;
   top: 50px;
   display: none;
 }
 
-.header-right div.active {
+.header-center div.active {
   display: block;
 }
 
-.header-right .dropdown-menus [class*="col-"] {
+.header-center .dropdown-menus [class*="col-"] {
   color: #DADBDB;
-  padding: 20px;
+  padding: 15px;
 }
 
-.header-right .dropdown-menus ul > li {
+.header-center .dropdown-menus ul > li {
   padding: 15px 0;
 }
 
-.header-right .dropdown-menus ul > li > a {
-  color: #8b959e;
-}
-
-.header-right .dropdown-menus ul > li.pointer > a {
+.header-center .dropdown-menus ul > li.pointer > a {
   color: rgba(25, 28, 31, 0.3);
 }
 
-
-.header-right .dropdown-menus ul > li > a:hover {
-  color: #191c1f;
-}
-
-.header-right .dropdown-menus ul > li.pointer {
+.header-center .dropdown-menus ul > li.pointer {
   position: relative;
 }
 
-.header-right .dropdown-menus ul > li.pointer > span {
+.header-center .dropdown-menus ul > li.pointer > span {
   color: #0666eb;
   font-size: 10px;
   text-transform: uppercase;
@@ -176,17 +153,17 @@ header .dropdown-menus {
   top: 6px;
 }
 
-.header-right .dropdown-menus ul > li.pointer > span.rewards {
+.header-center .dropdown-menus ul > li.pointer > span.rewards {
   right: 45px;
 }
 
-.header-right .dropdown-menus .cathegory {
+.header-center .dropdown-menus .cathegory {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
 }
 
-.header-right .dropdown-menus i {
+.header-center .dropdown-menus i {
   color: #fff;
   font-size: 12px;
   background-color: #ced5db;
@@ -195,10 +172,18 @@ header .dropdown-menus {
   position: relative;
 }
 
-.header-right .dropdown-menus h4 {
+.header-center .dropdown-menus h4 {
   display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
   margin-left: 5px;
+}
+
+.header-right .buttons > li > a.btn-grey:hover {
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+.header-right .buttons > li > a.btn-black:hover {
+  background-color: rgba(25, 28, 31, 0.84);
 }
