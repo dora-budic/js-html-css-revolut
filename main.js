@@ -5,14 +5,14 @@ $(document).ready(function () {
 
 function dropdownMenu() {
   // Prendo i link della navbar
-  var links = $('.header-center .menu li');
+  var links = $('.header-right .menu li');
 
   links.mouseenter(function() {
     // Prendo la posizione di this
     var linkPos = links.index(this);
 
     // Prendo i dropdown menus
-    var menus = $('.header-center .dropdown-menus > div');
+    var menus = $('.header-right .dropdown-menus > div');
 
     // Prendo il menu con la stessa posizione di this e gli do la classe active
     var menuPos = menus.eq(linkPos);
@@ -23,21 +23,11 @@ function dropdownMenu() {
       menuPos.removeClass('active');
     });
 
-    // Quando esco dal menu o dallo div che contiene i link tolgo la classe al menu
-    $('.dropdown-menus, .header-center').mouseleave(function () {
+    // Quando esco dal menu o dal div che contiene i link tolgo la classe al menu
+    $('.dropdown-menus, .header-right div.nav').mouseleave(function () {
       menuPos.removeClass('active');
     });
 
   });
 
-}
-
-function hamburgerMenu() {
-  var hamburger = $('.header-right .hamburger');
-
-  hamburger.click(function () {
-    var menu = $('header .hamburger-menu');
-    menu.toggleClass('active');
-    $('.header-left a.logo').toggle();
-  });
 }

@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
 /* UTILITIES */
@@ -34,16 +35,11 @@ body {
 header {
   height: 90px;
   padding: 20px 50px;
-  box-shadow: 0px 8px 16px rgba(25, 28, 31, 0.04);
   display: flex;
   justify-content: space-between;
 }
 
-.header-left ul, .header-center ul, .header-right > ul, header .hamburger-menu {
-  display: none;
-}
-
-.header-left, .header-center, .header-right {
+.header-left, .header-right {
   display: flex;
   align-items: center;
 }
@@ -57,16 +53,16 @@ header ul {
   list-style: none;
 }
 
-header .header-left ul > li, .header-center .menu > li, .header-right .buttons > li {
+header .header-left ul > li, .header-right ul.menu > li, .header-right .buttons > li {
   display:inline-block;
-  padding: 0 10px;
+  padding: 15px;
 }
 
 header ul > li > a {
   text-decoration: none;
 }
 
-.header-left ul > li > a, .header-center ul > li > a, .header-right .hamburger a {
+.header-left ul > li > a, .header-right .nav ul > li > a, .header-right .hamburger a {
   color: #8b959e;
 }
 
@@ -75,27 +71,32 @@ header ul > li > a {
   color: #191c1f;
 }
 
-.header-left ul > li > a:hover, .header-center ul > li > a:hover, .header-right .hamburger a:hover {
+.header-left ul > li > a:hover, .header-right .nav ul > li > a:hover, .header-right .hamburger a:hover {
   color: #191c1f;
 }
 
-.header-center {
+.header-right {
   position: relative;
 }
 
-header .header-center .dropdown-menus {
+.header-right .nav {
+  margin-right: 20px;
+}
+
+/* DROPDOWN MENUS */
+header .header-right .dropdown-menus {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.header-center .dropdown-menus > div {
+.header-right .dropdown-menus > div {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04) , 0px 8px 16px 0px rgba(0, 0, 0, 0.08) ;
 }
 
-.header-center .features-menu {
+.header-right .features-menu {
   width: 800px;
   position: absolute;
   left: -215px;
@@ -103,7 +104,7 @@ header .header-center .dropdown-menus {
   display: none;
 }
 
-.header-center .plans-menu {
+.header-right .plans-menu {
   width: 160px;
   position: absolute;
   left: 80px;
@@ -111,7 +112,7 @@ header .header-center .dropdown-menus {
   display: none;
 }
 
-.header-center .about-menu {
+.header-right .about-menu {
   width: 180px;
   position: absolute;
   left: 145px;
@@ -119,7 +120,7 @@ header .header-center .dropdown-menus {
   display: none;
 }
 
-.header-center .help-menu {
+.header-right .help-menu {
   width: 160px;
   position: absolute;
   left: 235px;
@@ -127,28 +128,28 @@ header .header-center .dropdown-menus {
   display: none;
 }
 
-.header-center div.active {
+.header-right .dropdown-menus div.active {
   display: block;
 }
 
-.header-center .dropdown-menus [class*="col-"] {
+.header-right .dropdown-menus [class*="col-"] {
   color: #DADBDB;
   padding: 15px;
 }
 
-.header-center .dropdown-menus ul > li {
+.header-right .dropdown-menus ul > li {
   padding: 15px 0;
 }
 
-.header-center .dropdown-menus ul > li.pointer > a {
+.header-right .dropdown-menus ul > li.pointer > a {
   color: rgba(25, 28, 31, 0.3);
 }
 
-.header-center .dropdown-menus ul > li.pointer {
+.header-right .dropdown-menus ul > li.pointer {
   position: relative;
 }
 
-.header-center .dropdown-menus ul > li.pointer > span {
+.header-right .dropdown-menus ul > li.pointer > span {
   color: #0666eb;
   font-size: 10px;
   text-transform: uppercase;
@@ -157,17 +158,17 @@ header .header-center .dropdown-menus {
   top: 6px;
 }
 
-.header-center .dropdown-menus ul > li.pointer > span.rewards {
+.header-right .dropdown-menus ul > li.pointer > span.rewards {
   right: 45px;
 }
 
-.header-center .dropdown-menus .cathegory {
+.header-right .dropdown-menus .cathegory {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
 }
 
-.header-center .dropdown-menus i {
+.header-right .dropdown-menus .cathegory i {
   color: #fff;
   font-size: 12px;
   background-color: #ced5db;
@@ -176,7 +177,7 @@ header .header-center .dropdown-menus {
   position: relative;
 }
 
-.header-center .dropdown-menus h4 {
+.header-right .dropdown-menus .cathegory h4 {
   display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
@@ -184,39 +185,11 @@ header .header-center .dropdown-menus {
   margin-left: 5px;
 }
 
-.header-right .buttons > li > a.btn-grey:hover {
+/* BUTTONS ON RIGHT SIDE */
+.header-right .buttons > li > a.btn-grey:hover, footer a.btn-grey:hover {
   background-color: rgba(230, 230, 230, 0.8);
 }
 
-.header-right .buttons > li > a.btn-black:hover {
+.header-right .buttons > li > a.btn-black:hover, footer a.btn-black:hover {
   background-color: rgba(25, 28, 31, 0.84);
-}
-
-.header-right .hamburger {
-  display: block;
-}
-
-.header-right .hamburger i {
-  font-size: 24px;
-}
-
-header .hamburger-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-header .hamburger-menu.active {
-  display: block;
-}
-
-
-@media all and (min-width: 992px) {
-  .header-left ul, .header-center ul, .header-right > ul {
-    display: block;
-  }
-
-  .header-right .hamburger {
-    display: none;
-  }
 }
