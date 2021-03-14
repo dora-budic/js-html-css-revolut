@@ -39,6 +39,10 @@ header {
   justify-content: space-between;
 }
 
+.header-left ul, .header-center ul, .header-right > ul, header .hamburger-menu {
+  display: none;
+}
+
 .header-left, .header-center, .header-right {
   display: flex;
   align-items: center;
@@ -62,7 +66,7 @@ header ul > li > a {
   text-decoration: none;
 }
 
-.header-left ul > li > a, .header-center ul > li > a {
+.header-left ul > li > a, .header-center ul > li > a, .header-right .hamburger a {
   color: #8b959e;
 }
 
@@ -71,7 +75,7 @@ header ul > li > a {
   color: #191c1f;
 }
 
-.header-left ul > li > a:hover, .header-center ul > li > a:hover {
+.header-left ul > li > a:hover, .header-center ul > li > a:hover, .header-right .hamburger a:hover {
   color: #191c1f;
 }
 
@@ -186,4 +190,33 @@ header .header-center .dropdown-menus {
 
 .header-right .buttons > li > a.btn-black:hover {
   background-color: rgba(25, 28, 31, 0.84);
+}
+
+.header-right .hamburger {
+  display: block;
+}
+
+.header-right .hamburger i {
+  font-size: 24px;
+}
+
+header .hamburger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header .hamburger-menu.active {
+  display: block;
+}
+
+
+@media all and (min-width: 992px) {
+  .header-left ul, .header-center ul, .header-right > ul {
+    display: block;
+  }
+
+  .header-right .hamburger {
+    display: none;
+  }
 }

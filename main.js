@@ -1,5 +1,6 @@
 $(document).ready(function () {
   dropdownMenu();
+  hamburgerMenu();
 });
 
 function dropdownMenu() {
@@ -29,4 +30,14 @@ function dropdownMenu() {
 
   });
 
+}
+
+function hamburgerMenu() {
+  var hamburger = $('.header-right .hamburger');
+
+  hamburger.click(function () {
+    var menu = $('header .hamburger-menu');
+    menu.toggleClass('active');
+    $('.header-left a.logo').toggle();
+  });
 }
