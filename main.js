@@ -1,6 +1,5 @@
 $(document).ready(function () {
   dropdownMenu();
-  hamburgerMenu();
 });
 
 function dropdownMenu() {
@@ -14,14 +13,11 @@ function dropdownMenu() {
     // Prendo i dropdown menus
     var menus = $('.header-right .dropdown-menus > div');
 
+    // Tolgo la classe al menu aperto
+    menus.removeClass('active');
     // Prendo il menu con la stessa posizione di this e gli do la classe active
     var menuPos = menus.eq(linkPos);
     menuPos.addClass('active');
-
-    // Quandro entro nell' altro li, tolgo la classe al menu aperto
-    $(this).siblings('li').mouseenter (function() {
-      menuPos.removeClass('active');
-    });
 
     // Quando esco dal menu o dal div che contiene i link tolgo la classe al menu
     $('.dropdown-menus, .header-right div.nav').mouseleave(function () {

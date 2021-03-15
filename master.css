@@ -62,7 +62,7 @@ header ul > li > a {
   text-decoration: none;
 }
 
-.header-left ul > li > a, .header-right .nav ul > li > a, .header-right .hamburger a {
+.header-left ul > li > a, .header-right .nav ul > li > a {
   color: #8b959e;
 }
 
@@ -71,7 +71,7 @@ header ul > li > a {
   color: #191c1f;
 }
 
-.header-left ul > li > a:hover, .header-right .nav ul > li > a:hover, .header-right .hamburger a:hover {
+.header-left ul > li > a:hover, .header-right .nav ul > li > a:hover {
   color: #191c1f;
 }
 
